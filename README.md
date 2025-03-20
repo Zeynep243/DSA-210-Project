@@ -9,22 +9,19 @@ My goal is to analyze how a country's education is effected from its GDP, effect
 I will look at the data between years 2012-18
 - PISA Performance Scores by Country
 Found on Kaggle datasets: https://www.kaggle.com/datasets/thedevastator/pisa-performance-scores-by-country
-* Features: PISA reading, mathematics and sciences scores for countries between 2012-2018
-I will use PISA scores as an indicator of the quality of education
+- * Features: PISA reading, mathematics and sciences scores for countries between 2012-2018: I will use PISA scores as an indicator of the quality of education
 
 - World Education Dataset
 Found on Kaggle datasets: https://www.kaggle.com/datasets/bushraqurban/world-education-dataset
-* Features: Primary school enrolment, Government expenditure on education as a percentage of GDP, Primary completion rate, Pupil teacher ratio, Secondary school enrolment
+- * Features: Primary school enrolment, Government expenditure on education as a percentage of GDP, Primary completion rate, Pupil teacher ratio, Secondary school enrolment
 
 - World Bank Governance Indicator Dataset
 https://www.worldbank.org/en/publication/worldwide-governance-indicators/interactive-data-access
-* Features: Political stability, government effectiveness
-I will use these features to analyze how government stability affects educational outcomes of the country
+- * Features: Political stability, government effectiveness: I will use these features to analyze how government stability affects educational outcomes of the country
 
 - World Bank GDP Dataset
 https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
-* Features: GDP, GDP per capita
-I will use country's GDP to analyze its effects on education and education spending
+- * Features: GDP, GDP per capita: I will use country's GDP to analyze its effects on education and education spending
 
 ## Data Anaysis
 ### Research Questions
