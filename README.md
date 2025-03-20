@@ -29,29 +29,41 @@ I will use country's GDP to analyze its effects on education and education spend
 ## Data Anaysis
 ### Research Questions
 - Do countries with higher GDP have higher PISA scores, do they have more or less gender gap in comparison to lower GDP countries?
-- Does teacher to pupil ratio affect primary school completion rate?
-- Do countries with higher education spending have higher teacher to pupil ratio?
+- Does teacher to pupil ratio affect PISA scores?
+- Do countries with higher education spending have higher PISA scores?
 - Does political stability and government effectiveness result in more education expenditure in ratio to GDP? Or does it increase PISA test scores?
-- Does higher teacher to pupil ratio correlate with secondary and primary school enrolments?
+- Does higher teacher to pupil ratio increasse PISA scores?
+
+### Hypotheses 
+H₀: The gender gap in PISA scores do not vary between high-GDP and low-GDP countries.
+H₁: The gender gap in PISA scores change significantly between high-GDP and low-GDP countries.
+
+H₀: There is no correlation between a country’s GDP per capita and its overall PISA scores.
+H₁: Countries with higher GDP per capita have higher overall PISA scores.
+
+H₀: The teacher-to-pupil ratio has no significant effect on PISA scores.
+H₁: Higher teacher-to-pupil ratio results in higher PISA scores.
+
+H₀: There is no correlation between the percentage of GDP spent on education and PISA scores.
+H₁: There is correlation between the percentage of GDP spent on education and PISA scores.
+
+H₀: Political stability and government effectiveness do not have an effect on PISA scores.
+H₁: Higher political stability and government effectiveness result in higher PISA scores.
+
 
 ### Methods 
 - I will use hypothesis testing to answer the research questions.
-- I plan to use machine learning to predict PISA score outcomes of the countries using their GDP, education spending and teacher to pupil ratio. 
+- For machine learning, multiple regression could be used to predict PISA score outcomes of the countries using their GDP, education spending and teacher to pupil ratio. 
 
 #### Python Methods
 - Numpy and Pandas will be used to clean the data and to transform it to useful format.
 - Matplotlib will be used to visualise the data. Mean, variance and changes in the data will be shown using graphs.
 - SciPy will be used to perform hypothesis testing. For chi square, t-test and ANOVA. 
 
-## Findings
-
-
 ## Limitations and Future Work
 
 - I am only looking at a limited number of features. Many different factors like cultural tendencies, family relationships, historical importance given to education can affect students performance. These features would be hard to quantify and they are not included in this analysis.
-
 - On top of these, immediate investments a country makes to education may produce long term results. Since I am working with currently available data and limited time frame of 6 years, such improvements may not be directly seen.
-
 - For future work, long term effects can be analyzed to have a broader view, and more features can be added. Countries can be individually analyzed according to their historical educational backgrounds.
 
 
