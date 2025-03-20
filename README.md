@@ -32,17 +32,17 @@ https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
 - Does higher teacher to pupil ratio increasse PISA scores?
 
 ### Hypotheses 
-H₀: The gender gap in PISA scores do not vary between high-GDP and low-GDP countries.
-H₁: The gender gap in PISA scores change significantly between high-GDP and low-GDP countries.
+H₀: Gender gap between high GDP countries are no different than gender gap in low GDP countries. 
+H₁: Gender gap between high GDP countries are less than the gender gap in low GDP countries. 
 
-H₀: There is no correlation between a country’s GDP per capita and its overall PISA scores.
-H₁: Countries with higher GDP per capita have higher overall PISA scores.
+H₀: Countries with higher GDP per capita have same overall PISA scores with lower GDP per capita countries.
+H₁: Countries with higher GDP per capita have higher overall PISA scores than lower GDP per capita countries.
 
-H₀: The teacher-to-pupil ratio has no significant effect on PISA scores.
+H₀: The teacher-to-pupil ratio has no effect on PISA scores.
 H₁: Higher teacher-to-pupil ratio results in higher PISA scores.
 
-H₀: There is no correlation between the percentage of GDP spent on education and PISA scores.
-H₁: There is correlation between the percentage of GDP spent on education and PISA scores.
+H₀: The percentage of GDP spent on education do not change PISA scores.
+H₁: Higher percentage of GDP spent on education results in higher PISA scores.
 
 H₀: Political stability and government effectiveness do not have an effect on PISA scores.
 H₁: Higher political stability and government effectiveness result in higher PISA scores.
