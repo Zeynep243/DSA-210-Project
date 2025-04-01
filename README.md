@@ -15,12 +15,10 @@ Found on Kaggle datasets: https://www.kaggle.com/datasets/thedevastator/pisa-per
 Found on Kaggle datasets: https://www.kaggle.com/datasets/bushraqurban/world-education-dataset
   * Features: Primary school enrolment, Government expenditure on education as a percentage of GDP, Primary completion rate, Pupil teacher ratio, Secondary school enrolment
 
-- World Bank Governance Indicator Dataset
-https://www.worldbank.org/en/publication/worldwide-governance-indicators/interactive-data-access
+- [World Bank Governance Indicator Dataset](https://www.worldbank.org/en/publication/worldwide-governance-indicators/interactive-data-access)
   * Features: Political stability, government effectiveness: I will use these features to analyze how government stability affects educational outcomes of the country
 
-- World Bank GDP Dataset
-https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+- [World Bank GDP Dataset](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD)
   * Features: GDP, GDP per capita: I will use country's GDP to analyze its effects on education and education spending
 
 ## Data Anaysis
