@@ -45,17 +45,26 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 - Does GINI score have correlation with mean total PISA scores?
 ---
 ### Hypotheses 
-**H₀:** Gender gap between high GDP countries are no different than gender gap in low GDP countries.  
-**H₁:** Gender gap between high GDP countries are less than the gender gap in low GDP countries. 
 
-**H₀:** Countries with higher GDP per capita have same overall PISA scores with lower GDP per capita countries.  
-**H₁:** Countries with higher GDP per capita have higher overall PISA scores than lower GDP per capita countries.
+**H₀:** The total PISA score mean is identical across all four income groups.  
+**H₁:** At least one income group has a different total PISA score mean.  
 
-**H₀:** The percentage of GDP spent on education do not change PISA scores.  
-**H₁:** Higher percentage of GDP spent on education results in higher PISA scores.
+**H₀:** The mean total PISA scores for high and lower-middle income countries are the same.  
+**H₁:** There is significant difference between the mean total PISA scores for high and lower-middle income countries.  
 
-**H₀:** Political stability and government effectiveness do not have an effect on PISA scores.  
-**H₁:** Higher political stability and government effectiveness result in higher PISA scores.
+**H₀:** The mean total PISA scores for high income and other income groups are the same.  
+**H₁:** There is significant difference between the mean total PISA scores for high income and other income groups.  
+
+**H₀:** Girls mean and boys mean for PISA reading scores are the same.  
+**H₁:** Girls mean PISA reading scores are higher than boys.  
+
+**H₀:** Girls mean and boys mean for PISA math scores are the same.  
+**H₁:** Girls mean PISA math scores are different than boys mean.  
+
+**H₀:** Girls mean and boys mean for PISA science scores are the same.  
+**H₁:** Girls mean PISA science scores are different than boys mean.  
+
+
 
 ---
 ### Methods 
