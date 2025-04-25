@@ -68,8 +68,8 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 
 ---
 ### Methods 
-- I will use hypothesis testing to answer the research questions.
-- For machine learning, multiple regression could be used to predict PISA score outcomes of the countries using their GDP, education spending and teacher to pupil ratio. 
+- I will use hypothesis testing and EDA to answer the research questions.
+- For machine learning, multiple regression could be used to predict PISA score outcomes of the countries using their GDP, education spending and income group. 
 
 ### Python Methods
 - Numpy and Pandas will be used to clean the data and to transform it to useful format.
