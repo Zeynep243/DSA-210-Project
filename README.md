@@ -38,12 +38,11 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 ---
 ## Data Anaysis
 ### Research Questions
-- Do countries with higher GDP have higher PISA scores, do they have more or less gender gap in comparison to lower GDP countries?
-- Does teacher to pupil ratio affect PISA scores?
+- Do countries with higher GDP have higher PISA scores?
+- Does a countries region has any correlation with its PISA scores?
+- Do girls and boys do better at different subjects, do they have similar overall results?
 - Do countries with higher education spending have higher PISA scores?
-- Does political stability and government effectiveness result in more education expenditure in ratio to GDP? Or does it increase PISA test scores?
-- Does higher teacher to pupil ratio increasse PISA scores?
-  
+- Does GINI score have correlation with mean total PISA scores?
 ---
 ### Hypotheses 
 **H₀:** Gender gap between high GDP countries are no different than gender gap in low GDP countries.  
@@ -51,9 +50,6 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 
 **H₀:** Countries with higher GDP per capita have same overall PISA scores with lower GDP per capita countries.  
 **H₁:** Countries with higher GDP per capita have higher overall PISA scores than lower GDP per capita countries.
-
-**H₀:** The teacher-to-pupil ratio has no effect on PISA scores.  
-**H₁:** Higher teacher-to-pupil ratio results in higher PISA scores.
 
 **H₀:** The percentage of GDP spent on education do not change PISA scores.  
 **H₁:** Higher percentage of GDP spent on education results in higher PISA scores.
@@ -68,14 +64,14 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 
 ### Python Methods
 - Numpy and Pandas will be used to clean the data and to transform it to useful format.
-- Matplotlib will be used to visualise the data. Mean, variance and changes in the data will be shown using graphs.
+- Matplotlib will be used to visualise the data. Interesting findings, average scores, changes in the data will be shown using graphs.
 - SciPy will be used to perform hypothesis testing. For chi square, t-test and ANOVA. 
 
 ---
 ## Limitations and Future Work
 
 - I am only looking at a limited number of features. Many different factors like cultural tendencies, family relationships, historical importance given to education can affect students performance. These features would be hard to quantify and they are not included in this analysis.
-- On top of these, immediate investments a country makes to education may produce long term results. Since I am working with currently available data and limited time frame of 6 years, such improvements may not be directly seen.
+- On top of these, immediate investments a country makes to education may produce long term results. Since I am working with currently available data and limited time frame of 22 years, such improvements may not be directly seen.
 - For future work, long term effects can be analyzed to have a broader view, and more features can be added. Countries can be individually analyzed according to their historical educational backgrounds.
 ---
 
