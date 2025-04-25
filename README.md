@@ -1,25 +1,33 @@
 # Country's Success to Education Quality Analysis (DSA 210 Project)
 
 ## Project Overview and Motivation
-My goal is to analyze how a country's education is effected from its GDP, effective governence, teacher to pupil ratios and educational spending. I will use PISA test scores as an indicator to check how these features affect education. I will also look at how invesment in education changes gender gap between the countries, if higher GDP and investment results in less gender gap. I am interested in this topic because education takes a lot of our time so wanted to look at factors in a country that affect its education quality.
+My goal is to analyze how a country's education is effected from its GDP per capita, income classification, GINI scores, effective governence, and educational spending. I will use PISA test scores as an indicator to check how these features affect education. I will be using PISA score for each country from the years 2000, 2003, 2006, ..., 2018,2022. PISA science, reading, math and combined total scores for both boys and girls will be looked at. I will also look at how invesment in education changes gender gap between the countries, if higher GDP and investment results in less gender gap. I am interested in this topic because education covers a huge portion in our lives so I wanted to look at factors that affect the education quality.
 
 ---
 ## Data Source and Features 
 
-I will look at the data between years 2012-18
-- PISA Performance Scores by Country
-Found on Kaggle datasets: https://www.kaggle.com/datasets/thedevastator/pisa-performance-scores-by-country
-  * Features: PISA reading, mathematics and sciences scores for countries between 2012-2018: I will use PISA scores as an indicator of the quality of education
+Since PISA scores are calculated in every three years, I will look at the years between 2000-22 that has PISA scores
 
-- World Education Dataset
-Found on Kaggle datasets: https://www.kaggle.com/datasets/bushraqurban/world-education-dataset
-  * Features: Primary school enrolment, Government expenditure on education as a percentage of GDP, Primary completion rate, Pupil teacher ratio, Secondary school enrolment
-
-- [World Bank Governance Indicator Dataset](https://www.worldbank.org/en/publication/worldwide-governance-indicators/interactive-data-access)
-  * Features: Political stability, government effectiveness: I will use these features to analyze how government stability affects educational outcomes of the country
-
-- [World Bank GDP Dataset](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD)
-  * Features: GDP, GDP per capita: I will use country's GDP to analyze its effects on education and education spending
+- [World Bank Income Classification Dataset](https://ourworldindata.org/grapher/world-bank-income-groups.csv?v=1&csvType=full&useColumnShortNames=true)
+ - [World Bank World Regions Dataset](https://ourworldindata.org/grapher/world-regions-according-to-the-world-bank.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank PISA Math Score Boy/Girl Dataset](https://ourworldindata.org/grapher/pisa-mean-performance-on-the-mathematics-scale-by-sex.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank PISA Reading Score Boy/Girl Dataset](https://ourworldindata.org/grapher/pisa-mean-performance-on-the-reading-scale-by-sex.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank PISA Science Score Boy/Girl Dataset](https://ourworldindata.org/grapher/average-performance-of-15-year-old-girls-and-boys-on-the-science-scale.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank PISA Math Average Dataset](https://ourworldindata.org/grapher/pisa-test-score-mean-performance-on-the-mathematics-scale.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Reading Average Dataset](https://ourworldindata.org/grapher/pisa-test-score-mean-performance-on-the-reading-scale.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Science Average Dataset](https://ourworldindata.org/grapher/average-performance-of-15-year-olds-on-the-science-scale.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Total Expenditure on Education Dataset](https://ourworldindata.org/grapher/total-government-expenditure-on-education-gdp.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank GDP per capita Dataset](https://ourworldindata.org/grapher/gdp-per-capita-worldbank.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World GINI Index Bank Dataset](https://ourworldindata.org/grapher/economic-inequality-gini-index.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Gender Inequality Index Dataset](https://ourworldindata.org/grapher/gender-inequality-index-from-the-human-development-report.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Share of Expenditure on Education Dataset](https://ourworldindata.org/grapher/share-of-education-in-government-expenditure.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Average Years of Schooling Dataset](https://ourworldindata.org/grapher/average-years-of-schooling.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Average Years of Schooling Male Dataset](https://ourworldindata.org/grapher/mean-years-of-schooling-male.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Dataset](https://ourworldindata.org/grapher/?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Average Years of Schooling Female Dataset](https://ourworldindata.org/grapher/mean-years-of-schooling-female.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Expected Years of Schooling Dataset](https://ourworldindata.org/grapher/expected-years-of-schooling.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Human Development Index Dataset](https://ourworldindata.org/grapher/human-development-index.csv?v=1&csvType=full&useColumnShortNames=false)
+ - [World Bank Political Corruption Dataset](https://ourworldindata.org/grapher/political-corruption-index.csv?v=1&csvType=full&useColumnShortNames=false)
 
 ---
 ## Data Anaysis
