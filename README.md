@@ -6,10 +6,15 @@ My goal is to analyze how a country's education is effected from its GDP per cap
 ---
 ## Data Source and Features 
 
-Since PISA scores are calculated in every three years, I will look at the years between 2000-22 that has PISA scores
+* I took all of my data from World Bank, links lead to csv files to download the datasets.
+* Since PISA scores are calculated in every three years, I will look at the years between 2000-22 that has PISA scores
 
 - [World Bank Income Classification Dataset](https://ourworldindata.org/grapher/world-bank-income-groups.csv?v=1&csvType=full&useColumnShortNames=true)
+  * High, low, upper-middle, lower-middle income groups for each country
+    
  - [World Bank World Regions Dataset](https://ourworldindata.org/grapher/world-regions-according-to-the-world-bank.csv?v=1&csvType=full&useColumnShortNames=false)
+
+   * World regions for counries like Europe, Asia...
  - [World Bank PISA Math Score Boy/Girl Dataset](https://ourworldindata.org/grapher/pisa-mean-performance-on-the-mathematics-scale-by-sex.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank PISA Reading Score Boy/Girl Dataset](https://ourworldindata.org/grapher/pisa-mean-performance-on-the-reading-scale-by-sex.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank PISA Science Score Boy/Girl Dataset](https://ourworldindata.org/grapher/average-performance-of-15-year-old-girls-and-boys-on-the-science-scale.csv?v=1&csvType=full&useColumnShortNames=false)
@@ -23,7 +28,6 @@ Since PISA scores are calculated in every three years, I will look at the years 
  - [World Bank Share of Expenditure on Education Dataset](https://ourworldindata.org/grapher/share-of-education-in-government-expenditure.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank Average Years of Schooling Dataset](https://ourworldindata.org/grapher/average-years-of-schooling.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank Average Years of Schooling Male Dataset](https://ourworldindata.org/grapher/mean-years-of-schooling-male.csv?v=1&csvType=full&useColumnShortNames=false)
- - [World Bank Dataset](https://ourworldindata.org/grapher/?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank Average Years of Schooling Female Dataset](https://ourworldindata.org/grapher/mean-years-of-schooling-female.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank Expected Years of Schooling Dataset](https://ourworldindata.org/grapher/expected-years-of-schooling.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank Human Development Index Dataset](https://ourworldindata.org/grapher/human-development-index.csv?v=1&csvType=full&useColumnShortNames=false)
