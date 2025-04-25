@@ -1,7 +1,9 @@
 # Country's Success to Education Quality Analysis (DSA 210 Project)
 
 ## Project Overview and Motivation
-My goal is to analyze how a country's education is effected from its GDP per capita, income classification, GINI scores, effective governence, and educational spending. I will use PISA test scores as an indicator to check how these features affect education. I will be using PISA score for each country from the years 2000, 2003, 2006, ..., 2018,2022. PISA science, reading, math and combined total scores for both boys and girls will be looked at. I will also look at how invesment in education changes gender gap between the countries, if higher GDP and investment results in less gender gap. I am interested in this topic because education covers a huge portion in our lives so I wanted to look at factors that affect the education quality.
+My goal is to analyze how a country's education is effected from its GDP per capita, income classification, GINI scores, effective governence, and educational spending. I will use PISA test scores as an indicator to check how these features affect education. 
+
+I will be using PISA score for each country from the years 2000, 2003, 2006, ..., 2018,2022. PISA science, reading, math and combined total scores for both boys and girls will be looked at. I will also look at how invesment in education changes gender gap between the countries, if higher GDP and investment results in less gender gap. I am interested in this topic because education covers a huge portion in our lives so I wanted to look at factors that affect the education quality.
 
 ---
 ## Data Source and Features 
