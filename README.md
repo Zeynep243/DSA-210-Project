@@ -87,7 +87,7 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 - SciPy will be used to perform hypothesis testing. For chi square, t-test and ANOVA. 
 
 ---
-##EDA and Hypothesis Testing
+## EDA and Hypothesis Testing
 
 
 ![Gender Score Differences by Subject across PISA Years](https://github.com/user-attachments/assets/22251069-2d70-4f31-b8bf-5fabbf342444)
