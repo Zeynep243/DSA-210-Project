@@ -46,15 +46,6 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 ---
 ### Hypotheses 
 
-**H₀:** The total PISA score mean is identical across all four income groups.  
-**H₁:** At least one income group has a different total PISA score mean.  
-
-**H₀:** The mean total PISA scores for high and lower-middle income countries are the same.  
-**H₁:** There is significant difference between the mean total PISA scores for high and lower-middle income countries.  
-
-**H₀:** The mean total PISA scores for high income and other income groups are the same.  
-**H₁:** There is significant difference between the mean total PISA scores for high income and other income groups.  
-
 **H₀:** Girls mean and boys mean for PISA reading scores are the same.  
 **H₁:** Girls mean PISA reading scores are higher than boys.  
 
@@ -63,6 +54,25 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 
 **H₀:** Girls mean and boys mean for PISA science scores are the same.  
 **H₁:** Girls mean PISA science scores are different than boys mean.  
+
+**H₀:** The total PISA score mean is identical across all four income groups.  
+**H₁:** At least one income group has a different total PISA score mean.  
+
+**H₀:** The mean total PISA scores for high and lower-middle income countries are the same.  
+**H₁:** There is significant difference between the mean total PISA scores for high and lower-middle income countries.
+
+**H₀:** The mean total PISA scores for high income and other income groups are the same. 
+**H₁:** There is significant difference between the mean total PISA scores for high income and other income groups.  
+
+**H₀:** The mean total PISA score is identical across all five world regions.  
+**H₁:** At least one world region has a significantly different mean total PISA score.
+
+**H₀:** The mean total PISA score for Europe and Africa are the same.  
+**H₁:** Europe's mean total PISA score is significantly higher than Africa's.
+
+**H₀:** The mean total PISA score for South America and North America are the same.  
+**H₁:** The mean total PISA score for South America and North America are significantly different.
+
 
 
 
@@ -75,6 +85,248 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
 - Numpy and Pandas will be used to clean the data and to transform it to useful format.
 - Matplotlib will be used to visualise the data. Interesting findings, average scores, changes in the data will be shown using graphs.
 - SciPy will be used to perform hypothesis testing. For chi square, t-test and ANOVA. 
+
+---
+##EDA and Hypothesis Testing
+
+
+![Gender Score Differences by Subject across PISA Years](https://github.com/user-attachments/assets/22251069-2d70-4f31-b8bf-5fabbf342444)
+
+
+
+
+*   With this graph, I wanted to see if there are any score differences for reading, science and mathematics scores for boys and girls.
+    * Subject score differences (girls-boys) are plotted for each year PISA score is taken
+    * Difference= subject.girls – subject.boys, subject = ‘Science’, ‘Math’, ‘Reading’, ‘Total’
+
+* It seems that girls are on average scoring higher on reading, so I will apply 1-tailed t test to see if this difference is significant.
+
+* Science and Math scores look nearly the same, so I will apply 2-tailed t test to see if there is a difference.
+
+***
+
+### Hypothesis Testing
+
+* **Significance level alpha = 0.05 will be used for all the tests.**
+
+**H₀:** Girls mean and boys mean for PISA reading scores are the same.  
+**H₁:** Girls mean PISA reading scores are significantly higher than boys.
+
+**H₀:** μ girls − μ boys = 0  
+**H₁:** μ girls > μ boys
+
+
+**Method:** One-tailed independent t-test is used.
+* t = 10.623, one-tailed p = 0.0000
+   * P-value is smaller than 0.05, null hypothesis is rejected. 
+   * There is significant evidence that girls mean PISA reading scores are higher than boys.
+***
+
+**H₀:** Girls mean and boys mean for PISA math scores are the same.  
+**H₁:** Girls mean PISA math scores are significantly different than boys mean.
+
+**H₀:** μ girls − μ boys = 0  
+**H₁:** μ girls - μ boys ≠ 0
+
+
+**Method:** Two-tailed independent t-test is used.
+* t = -1.412, two-tailed p = 0.1581
+   * Two tailed p-value is bigger than 0.05, fail to reject null hypothesis. 
+   * Not enough evidence to say girls and boys mean PISA math scores are different.
+
+***
+**H₀:** Girls mean and boys mean for PISA science scores are the same.  
+**H₁:** Girls mean PISA science scores are significantly different than boys mean.
+
+**H₀:** μ girls − μ boys = 0  
+**H₁:** μ girls - μ boys ≠ 0
+
+**Method:** Two-tailed independent t-test is used.
+
+* t = 1.246, two-tailed p = 0.2129
+   * Two tailed p-value is bigger than 0.05, fail to reject null hypothesis. 
+   * Not enough evidence to say girls and boys mean PISA science scores are different.
+
+
+* Hypothesis tests showed that while there is a difference between reading scores between boys and girls, math and science score differences are not statistically significant.
+****
+
+![Score Distribution by Income Level](https://github.com/user-attachments/assets/9222a0fe-c4ce-4c10-be81-9e5933580b38)
+
+
+******************************************
+**H₀:** The mean total PISA score is identical across all four income groups.  
+**H₁:** At least one income group has a significantly different mean total PISA score.  
+
+**Method:** ANOVA is used since more than two means are compared.
+
+* f-statistic = 245.359 p-value = 0.0000
+   * P-value is smaller than 0.05, null hypothesis is rejected. 
+   * At least one of the income groups mean is different than the others.
+
+* Result from ANOVA support the visual difference income groups have in the graph.
+
+***
+
+![Distribution of PISA Scores by Income Group-1](https://github.com/user-attachments/assets/934819cd-8785-406e-afb4-c31cd9540a9b)
+
+* From these graphs there seems to be a significant PISA score difference between high income and lower-middle income countries. Also other combinations of income groups will be subject to hypothesis testing to see the relation.
+
+******************************************
+**H₀:** The mean total PISA scores for high and lower-middle income countries are the same.  
+**H₁:** There is significant difference between the mean total PISA scores for high and lower-middle income countries.
+
+**Method:** Two-tailed independent t test is used.
+* t-statistic = 24.146 two-tailed p-value = 0.000
+   * P-value is smaller than 0.05, null hypothesis is rejected. 
+   * There is significant difference between mean total PISA scores of high and lower-middle income countries. Higher income countries have higher PISA scores.
+
+
+****
+* It is clear that there is a difference after hypothesis testing, now I will check other income groups and see if such a difference will persist.
+***
+
+
+
+![Distribution of PISA Scores by Income Group-2](https://github.com/user-attachments/assets/89fb1fcb-643d-445c-9330-daa9cba0df98)
+
+****
+
+**H₀:** The mean total PISA scores for high income and other income groups are the same.  
+**H₁:** There is significant difference between the mean total PISA scores for high income and other income groups.
+
+**Method:** Two-tailed independent t test is used.
+* t-statistic = 26.024 two-tailed p-value = 0.0000
+   * P-value is smaller than 0.05, null hypothesis is rejected.  
+   * There is significant difference between mean total PISA scores of high and lower-middle income countries. Higher income countries have higher PISA scores.
+     
+***
+* There is significant difference  when High income and lower-middle income are compared. And such a difference persist in the second t test, when high income countries are compared with other three income groups combined.   
+
+* Higher income countries have higher PISA scores in both cases.
+
+***
+
+
+![World Region and PISA Scores](https://github.com/user-attachments/assets/489c1c60-1a99-4163-aac8-b667fd0ce90c)
+
+* This graph shows mean total PISA score for different world regions. Below are the number of results each country has:  
+   * Europe:         328  
+   * Africa:         24  
+   * South America:  56  
+   * Oceania:        16  
+   * Asia:           200  
+   * North America:  80  
+
+* Oceania is not included to ANOVA as its sample size is too small.
+
+******************************************
+**H₀:** The mean total PISA score is identical across all five world regions.  
+**H₁:** At least one world region has a significantly different mean total PISA score.
+
+**Method:** ANOVA is used since more than two means are compared.
+* f-statistic = 60.702 p-value = 0.0000
+
+   * P-value is smaller than 0.05, null hypothesis is rejected. 
+   * At least one of the world regions mean is different than the others.
+* Oceania is excluded from the test. But ANOVA still shows that at least 2 different world regions have different mean PISA scores.
+
+***
+
+**H₀:** The mean total PISA score for Europe and Africa are the same.  
+**H₁:** Europe's mean total PISA score is significantly higher than Africa's.
+
+**Method:** One-tailed independent t test is used. From the graph Europe seems to have higher scores so if there is a significant difference Europe would have higher scores.
+
+* t = 34.472, one-tailed p = 0.0000  
+   * P-value is smaller than 0.05, null hypothesis is rejected.  
+   * There is significant evidence that Europe mean total PISA scores are higher than Africa's.  
+
+***
+
+H₀: The mean total PISA score for South America and North America are the same.  
+H₁: The mean total PISA score for South America and North America are significantly different.
+
+t = -1.713, two-tailed p = 0.0893
+   * P-value is bigger than 0.05, fail to reject null hypothesis.
+
+* Hypothesis test show that Europe and Africa has significant difference but for South America and North America there is no significant relationship between the scores.
+***
+![Six Socio-Economic Indicators vs PISA Total Score](https://github.com/user-attachments/assets/2e34d81f-4029-43be-8770-9f0eb2d66f73)
+Note: 6 different graphs from ipynb file is combined here to save space
+
+
+#### Pearson Correlation Tests with PISA total average
+
+* All p-values are smaller than 0.05 so correlation found in these tests are unlikely to be due to random chance and are statistically significant.
+
+***
+Gender Inequality: Pearson r = -0.767, p = 0.000  
+ * Gender inequality has strong negative correlation with PISA scores
+   *  Gender inequality measures reproductive health, empowerment, and economic status for genders, and higher score means higher inequalities. This shows countries that have better gender equality tend to have better scores. 
+
+GDP PPP per Capita: Pearson r = 0.568, p = 0.000  
+   * GDP per capita has moderate positive correlation with PISA scores. This could mean that these countries have more resources to allocate to all matters including education hence tending to have better results.
+   * Correlation between PISA scores for countries having higher vs less than 50 000 GDP per capita will be looked at in the coming section.
+
+***
+Government Education Spending %: Pearson r = -0.262, p = 0.000  
+Education Spending to GDP ratio: Pearson r = 0.327, p = 0.000  
+  *  Government Education Spending % show how much of the governments total spending goes to education, and Education Spending to GDP ratio shows the share of GDP that is spent on public education.
+  *  There is a weak but statistically significant negative correlation between government education spending % and PISA scores, indicating that countries allocating a larger share of total government expenditure to education tend to have slightly lower average PISA scores.
+  *  Whereas Education Spending to GDP ratio has again weak, but this time positive correlation with mean total PISA Scores.
+  *  These show that allocating a larger portion of a government’s budget to education doesn’t necessarily correlate with higher scores, and countries investing a larger portion of their economic output in education tend to achieve slightly higher PISA scores. But both correlations are weak to do much inference.
+***
+Expected School Years: Pearson r = 0.691, p = 0.000    
+   * Expected school years and PISA scores have strong positive correlation. 
+     
+Human Development Index: Pearson r = 0.788, p = 0.000  
+  * HDI aims to measure long and healthy life, good education, and decent standard of living. By factoring life expectancy at birth, expected and mean years of schooling and GNI per capita.   
+     * Since it also has schooling years HDI is expected to have positive correlation with PISA scores (from the correlation test for expected school years (r = 0.691)). But it also shows higher correlation than 0.69 so it indicates that life expectancy and stardard of living also have some positive correlation with PISA scores.
+
+***
+Corruption Index: Pearson r = -0.746, p = 0.000  
+* Corruption Index measures the corruption in that country's government, and higher scores mean more corruption. Since corruption index has strong negative corrrelation with PISA scores, countries that have transparent governments tend to have higher PISA scores.  
+
+ 
+
+***
+
+![PISA Total Score vs GDP per Capita (Bubble Size = GINI Index) 2022 ](https://github.com/user-attachments/assets/72bfcd1a-b1fb-415a-bb22-8ccf84c55573)
+
+
+* From the PISA scores and GDP graph, it looks like GDP increase is correlated with higher PISA scores. But this effect seems to stop for GDP's higher than 50 000. That is why I used Pearson correlation test to see GDP's correlation with PISA scores for above and below 50 000 GDP per capita.  
+   * Higher-GDP subset: Pearson r = -0.220, p = 0.002  
+   * Lower-GDP subset: Pearson r = 0.741, p = 0.000  
+   * For both subsets p-value < 0.05 so both correlations are statistically significant.
+
+* Looking at the Higher GDP subset's Pearson correlation test, the correlation with PISA scores is weak and it is negatively corelated.
+
+   * So after 50 0000, GDP increase does not have a positive correlation with PISA scores, it even seems to slightly decrease but correlation is weak.  
+
+* On the otherhand, for Lower-GDP subset, GDP has strong positive correlation with PISA scores. So within this subset, countries having higher GDP tend to have higher PISA scores and the correlation is quite strong, unlike the other subset (GDP over 50 000).
+
+* These findings show even though GDP correlates with higher scores, this is not the case when GDP goes above 50 000 per capita.
+
+***
+* From the graph higher PISA scoring countries seem to have lower GINI scores so Pearson correlation test is done to see the significance.
+
+GINI Coefficient: Pearson r = -0.504, p = 0.000  
+* GINI coeficient increase has moderate negative correlation with PISA scores.
+* Higher GINI coefficient means higher income inequality. So the countries with lower GINI coefficient, therefore having more equal income distributions, tend to have higher PISA scores. This finding supports the graph.
+
+***
+
+
+![Correlation Matrix](https://github.com/user-attachments/assets/95564663-0018-45ac-b8dd-ee191923b9d4)
+
+* From this matrix it is again visible that education spending ratio to GDP and government education spending percentage has lowest correlation with total PISA score averages.  
+
+
+* Whereas gender inequality, corruption index have strongest negative correlation and HDI has strongest positive correlation with PISA scores.  
+  * There are also highly correlated features like gender inequality and average school years or HDI and corruption index, these will be looked at while applying machine learning.
+
+
 
 ---
 ## Limitations and Future Work
