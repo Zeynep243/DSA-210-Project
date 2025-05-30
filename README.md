@@ -329,7 +329,14 @@ GINI Coefficient: Pearson r = -0.504, p = 0.000
 
 
 ## Machine Learning 
+* For the machine learning of this project, my aim is to predict PISA score averages given the features like GDP, world region, income level, expected school years, gender inequality etc.
 
+
+* I will try different models, namely: K nearest neighbours, decision tree, XGBoost regression. I will also try changing their parameters to see if I can get a lower MSE / RMSE.
+
+* I will do predictions not classification, so regressors of said models will be used.
+* At the end I will compare these scores with each other to find the model that best predicts the PISA scores from my dataset.
+---
 ### K-Nearest Neighbours Regression
 
 
