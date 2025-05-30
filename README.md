@@ -35,6 +35,8 @@ I will be using PISA score for each country from the years 2000, 2003, 2006, ...
  - [World Bank Human Development Index Dataset](https://ourworldindata.org/grapher/human-development-index.csv?v=1&csvType=full&useColumnShortNames=false)
  - [World Bank Political Corruption Dataset](https://ourworldindata.org/grapher/political-corruption-index.csv?v=1&csvType=full&useColumnShortNames=false)
 
+*While preparing this project, I took all of my data from World Bank, used Google Collab to write and run the codes, and used ChatGPT for AI assistance.*
+
 ---
 ## Data Anaysis
 ### Research Questions
