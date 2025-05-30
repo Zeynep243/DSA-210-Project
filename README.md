@@ -392,14 +392,15 @@ GINI Coefficient: Pearson r = -0.504, p = 0.000
 
 Before hyperparameter tuning with default values:
 * MSE per Fold
-| Fold             | MSE     |
-|:----------------:|:-------:|
-|  1               | 266.63  |
-|  2               | 351.95  |
-|  3               | 545.95  |
-|  4               | 454.79  |
-|  5               | 465.95  |
-| **Mean MSE**     | **417.05** |
+
+| Fold |   MSE   |
+|:----:|:-------:|
+|  1   |  266.63 |
+|  2   |  351.95 |
+|  3   |  545.95 |
+|  4   |  454.79 |
+|  5   |  465.95 |
+| **Mean MSE** | **417.05** |
 
 ---
 
@@ -438,7 +439,8 @@ Fitting 5 folds for each of 100 candidates, totalling 500 fits
 
 * Europe contains many high scoring countries so having a huge importance in XGB could be expected.
 
-
+---
+*As an extra, I tried applying multilinear regression to my data set. It is on the Machine_Learning.ipynb*
 ---
 ## Limitations and Future Work
 
