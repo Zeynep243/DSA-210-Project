@@ -476,9 +476,7 @@ ___
 ## Limitations and Future Work
 
 - I am only looking at a limited number of features. Many different factors like cultural tendencies, family relationships, historical importance given to education can affect students performance. These features would be hard to quantify and they are not included in this analysis.
-- 
 - On top of these, immediate investments a country makes to education may produce long term results. Since I am working with currently available data and limited time frame of 22 years, such improvements may not be directly seen.
-- 
 - For future work, long term effects can be analyzed to have a broader view, and more features can be added. Countries can be individually analyzed according to their historical educational backgrounds.
 ---
 
