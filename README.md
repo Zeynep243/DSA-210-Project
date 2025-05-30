@@ -327,6 +327,117 @@ GINI Coefficient: Pearson r = -0.504, p = 0.000
   * There are also highly correlated features like gender inequality and average school years or HDI and corruption index, these will be looked at while applying machine learning.
 
 
+## Machine Learning 
+
+### K-Nearest Neighbours Regression
+
+
+* If features are not standardized, then larger scaled values will affect the results more than the smaller scaled values when finding the nearest neighbours. Because of this reason, before features are used, they are standardized for KNN.  
+
+* Target value PISA scores will be kept as is.
+  
+![image](https://github.com/user-attachments/assets/82375460-225a-4fd4-9d7d-4de185d0eddc)
+* When different number of neighboors are compared, k=1 gives the lowest MSE. But there is a risk of overfitting if k is picked as 1.
+
+> MSE at k=1: 468.330  
+> RMSE at best k=1: 21.641
+
+* Therefore, I plotted another graph to see how different train and validation MSE's are.  
+ * As seen in the graph, MSE is ~0 for k=1 in training set and ~300 for validation set. This means there is overfitting.  
+ * Because of this even though k=1 lowers the MSE, it looks better to choose k around 5 to 8.
+
+> MSE for k = 5, ..., 8:  
+>  k = 5: MSE = 676.412, RMSE = 26.008   
+>  k = 6: MSE = 710.845, RMSE = 26.662  
+>  k = 7: MSE = 727.382, RMSE = 26.970  
+>  k = 8: MSE = 756.822, RMSE = 27.510  
+
+* From these 6 could be chosen to reduce overfitting while getting a relatively lower MSE/RMSE.
+
+---
+### Decision Tree
+
+
+![image](https://github.com/user-attachments/assets/2dd67c25-2338-484f-8c82-9b5508dec3ff)
+
+* Here is a decision tree with min_samples_leaf = 1, and mean_samples_split = 2, and the graph shows how different max_depth affects the model.
+
+* With these hyperparameters best max_depth is 9. And corresponding MSE and RMSE are as follows:      
+  * MSE = 847.882 
+  * RMSE = 29.118
+
+* Increasing max depth also increases the complexity of the model. Since largest decrease happens before 6. And max_depth = 6 produces very similar results to depth 9, so I will choose 6 as my max depth.
+ 
+* For max_depth = 6:  
+  * MSE: 872.777 
+  * RMSE: 29.543 
+
+
+* I will now try different split and leaf sizes to see if they will improve the predictions.
+
+---
+
+![image](https://github.com/user-attachments/assets/cdb3cac5-86ef-4729-927f-bd4c8d87e7e9)
+
+* Choosing min_samples_split = 2 and min_samples_leaf = 7 improved the results further. 
+
+* For min_samples_split = 2 and min_samples_leaf = 8 and max_depth = 6:   
+  * MSE: 653.65
+  * RMSE: 25.567
+
+* These results are better than comparing with only tuning max_depth hyperparameter.
+
+---
+### XGBoost Regression
+
+Before hyperparameter tuning with default values:
+* MSE per Fold
+| Fold             | MSE     |
+|:----------------:|:-------:|
+|  1               | 266.63  |
+|  2               | 351.95  |
+|  3               | 545.95  |
+|  4               | 454.79  |
+|  5               | 465.95  |
+| **Mean MSE**     | **417.05** |
+
+---
+
+* RMSE per Fold
+
+| Fold           | RMSE    |
+|:--------------:|:-------:|
+|  1              | 16.33   |
+|  2              | 18.76   |
+|  3              | 23.37   |
+|  4              | 21.33   |
+|  5              | 21.59   |
+| **Mean RMSE** | **20.42** |
+
+---
+Fitting 5 folds for each of 100 candidates, totalling 500 fits
+
+*  Best Parameters
+
+| Parameter      | Value |
+| -------------- | ----- |
+| **learning_rate** | 0.1   |
+| **max_depth**     | 5     |
+| **n_estimators**  | 500   |
+
+* Cross-Validation Performance
+
+| Metric        | Value  |
+| ------------- | ------ |
+| **CV MSE**    | 371.77 |
+| **CV RMSE**   | 19.28  |
+
+---
+![image](https://github.com/user-attachments/assets/158f1509-1519-4b12-8530-aa6252954a47)
+* HDI score is calculated using 3 features: healthy life, knowledge and decent standard of living. So this feature seems to encapsulate important information for PISA score prediction.   
+
+* Europe contains many high scoring countries so having a huge importance in XGB could be expected.
+
 
 ---
 ## Limitations and Future Work
