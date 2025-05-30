@@ -446,6 +446,29 @@ Fitting 5 folds for each of 100 candidates, totalling 500 fits
 * HDI score is calculated using 3 features: healthy life, knowledge and decent standard of living. So this feature seems to encapsulate important information for PISA score prediction.   
 
 * Europe contains many high scoring countries so having a huge importance in XGB could be expected.
+  
+---
+#### Model RMSE Comparison
+
+| Model           | RMSE   |
+|:----------------|-------:|
+| **KNN**        | 26.662 |
+| **Decision Tree** | 25.567 |
+| **XGBoost**     | 19.280 |
+
+
+* Among KNN, Decision Tree and XGBoost regression after doing hyperparameter tuning, these are their lowest RMSE results.  
+   * XGBoost sequentially adds trees and corrects the previous errors, it seemed to perform best for this data set and PISA score predictions.
+   * Unlike XGBoost, decision tree only works with one tree. I thought this may lead to higher error, but I wanted to apply decision tree as it is the base for random forest and XGBoost.
+ 
+#### Comments on RMSE values
+* My lowest RMSE scores I can get are still high, to reduce them I tried to add country names to the models. This reduces the error but results in overfitting.  
+  * I tried using GroupKFold and target encoding to avoid this overfitting problem. But it did not work as well as I expected. I suspect that it is caused by some countries having the same PISA score for all of their 8 different years.
+  * Because of this, I ended up excluding the country names and only used one hot encoded income level and world region features.
+
+
+
+
 
 ___  
   * _As an extra, I tried applying multilinear regression to my data set. It is on the Machine_Learning.ipynb_
