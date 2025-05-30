@@ -440,8 +440,8 @@ Fitting 5 folds for each of 100 candidates, totalling 500 fits
 
 * Europe contains many high scoring countries so having a huge importance in XGB could be expected.
 
----
-*As an extra, I tried applying multilinear regression to my data set. It is on the Machine_Learning.ipynb*
+___  
+  * _As an extra, I tried applying multilinear regression to my data set. It is on the Machine_Learning.ipynb_
 ---
 ## Limitations and Future Work
 
